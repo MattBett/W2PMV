@@ -1,7 +1,7 @@
 const dev = true;
 
 const server = {
-    url: 'prout',
+    url: '',
     ip: '',
     localhost: '127.0.0.1',
     entryPoint: '3000',
