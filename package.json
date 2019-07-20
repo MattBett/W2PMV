@@ -4,7 +4,9 @@
   "description": "A web app that tells you where to park your velov (=free2use bikes in Lyon)",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^1.19.1"
   },
   "devDependencies": {},
   "scripts": {
