@@ -3,10 +3,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+        <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
         <title>W2PMV</title>
     </head>
-    <body>
+    <body onload="initialize()">
         <h1>Where To Park My Velo'v ?</h1>
+        <div id="map" style="width:100%; height:90%"></div>
     </body>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+        function initialize() {
+            var map = L.map('map').setView([48.833, 2.333], 7); // LIGNE 14
+    
+            var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { // LIGNE 16
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            });
+        
+            map.addLayer(osmLayer);
+
+            //Création du marqueur
+            var stationIcon = L.icon({
+                iconUrl: 'resources/marqueur.png',
+                iconSize:     [64, 64], // taille de l'icone
+                iconAnchor:   [32, 64], // point de l'icone qui correspondra à la position du marker
+                popupAnchor:  [-3, -76] // point depuis lequel la popup doit s'ouvrir relativement à l'iconAnchor
+            });
+
+            L.marker([48.5, -0.09], {icon: stationIcon}).addTo(map)
+                .bindPopup('Plus de détail sur cette station Velo\'v (html)');
+            }
+    </script>
 </html>
