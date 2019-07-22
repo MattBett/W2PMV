@@ -2,9 +2,9 @@ const dev = true;
 
 const server = {
     url: '',
-    ip: '',
+    ip: 'www.matthieubettinger.fr', //En construction
     localhost: '127.0.0.1',
-    entryPoint: '3000',
+    port: '80',
     service: '/api',
 
     headers: new Headers(),
@@ -17,9 +17,9 @@ const server = {
 
     init: function() {
         if(dev) {
-            server.url = 'http://' + server.localhost + ':' + server.entryPoint;
+            server.url = 'https://' + server.localhost + ':' + server.entryPoint;
         } else {
-            server.url = 'http://' + server.ip + ':' + server.entryPoint;
+            server.url = 'https://' + server.ip;
         }     
         
         this.reqAPI = new Request(this.url + this.service, this.getInit);
@@ -30,7 +30,7 @@ const app = {
     init: function() {
         server.init();
         this.refresh();
-        setInterval(this.refresh, 7500);
+        setInterval(this.refresh, 25000);
     },
 
     refresh: async function() {
