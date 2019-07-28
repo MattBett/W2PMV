@@ -5,11 +5,34 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
         <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-        <title>WDIPMV</title>
+        <link rel="stylesheet" href="style.css">
+        <title>Où garer mon Vélo'V ?</title>
     </head>
     <body onload="initialize()">
-        <h1>Where Do I Park My Velo'v ?</h1>
-        <div id="map" style="width:100%; height:90%"></div>
+        <header>
+            <h1>Où garer mon Vélo'V ?</h1>
+            <aside>
+                <figure>
+                    <img src="resources/empty.png" alt="Marqueur station velov libre" />
+                    <figcaption>Stands libres disponibles</figcaption>
+                </figure>
+                <figure>
+                    <img src="resources/almost-empty.png" alt="Marqueur station velov bientôt pleine" />
+                    <figcaption>Presque plus de stands libres (entre 1 et 4 restants)</figcaption>
+                </figure>
+                <figure>
+                    <img src="resources/full.png" alt="Marqueur station velov pleine" />
+                    <figcaption>Station pleine ! Plus de stand disponible</figcaption>
+                </figure>
+                <figure>
+                    <img src="resources/warning.png" alt="Marqueur station velov attention" />
+                    <figcaption>La station est fermée ou a un problème...</figcaption>
+                </figure>
+            </aside>
+        </header>
+        
+        <div id="map"></div>
+        <!--<img src="resources/velov-logo.png" alt="Logo Velo'v Grand Lyon" id="Logo"> -->
     </body>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="map.js"></script>

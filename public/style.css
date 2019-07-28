@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'LemonMilkLight';
+    src: url('LemonMilklight.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(79, 100, 192);
+}
+
+h1 {
+    font-family: 'LemonMilkLight';
+    margin: 5px;
+}
+
+header {
+    height: 11%;
+    width: 100%;
+    text-align: center;
+}
+
+#map {
+    height: 89%;
+    width: 100%;
+}
+
+figure img {
+    width: 56px;
+    height: 56px;
+}
+
+figcaption {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    position: top left;
+}

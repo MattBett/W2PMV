@@ -1,0 +1,8 @@
+
+/node_modules/*
+/public/resources/tools/*
+current-location-android.zip
+data-minified.json
+data-full.json
+.env
+package-lock.json
